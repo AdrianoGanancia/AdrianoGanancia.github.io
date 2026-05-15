@@ -1,9 +1,32 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
 <html>
 	<head>
 		<title>Stages - Project Revive</title>
@@ -40,7 +63,12 @@
 									<p>Stage one consisted of forming a concept and planning out how the <a href="group.html">group</a> were going to delegate their roles.
 										At this point in time it was key to create a Gantt Chart so that everyone had an understanding on the time frame we had and also so they are able to track what tasks they are doing so the group would be able to work cooperatavly and efficiently.
 										</p>
-											<a href="images/gantt.png" class="button">Click here to see image</a>
+											<a href="#gantt-lightbox" class="button">Click here to see image</a>
+
+<div id="gantt-lightbox" class="lightbox">
+    <a href="#" class="close">✕</a>
+    <img src="images/gantt.png" alt="Gantt Chart">
+</div>
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
